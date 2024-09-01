@@ -7,6 +7,7 @@ import { configuration } from 'src/config/config';
     ConfigModule.forRoot({
       load: configuration,
       isGlobal: true,
+      // validate(config) {},:
     }),
   ],
   providers: [],

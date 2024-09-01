@@ -1,12 +1,20 @@
-import { IsPhoneNumber, IsString, Length } from 'class-validator';
+import { IsMobilePhone, IsString, Length } from 'class-validator';
 
 export class SendOtpDto {
-  @IsPhoneNumber('IR', { message: ['mobile number is invalid'].join('') })
+  @IsMobilePhone(
+    'fa-IR',
+    {},
+    { message: ['mobile number is invalid'].join('') },
+  )
   mobile: string;
 }
 
 export class CheckOtpDto {
-  @IsPhoneNumber('IR', { message: ['mobile number is invalid'].join('') })
+  @IsMobilePhone(
+    'fa-IR',
+    {},
+    { message: ['mobile number is invalid'].join('') },
+  )
   mobile: string;
 
   @IsString()
